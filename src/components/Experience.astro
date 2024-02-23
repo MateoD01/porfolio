@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: 'Octubre 2023 - Diciembre 2023',
+        title: 'Programador FullStack',
+        company: 'Infosoft', 
+        description:
+            'Pasantía en parte de prácticas profesionalizantes universitarias. Desarrollo de aplicaciones web con PHP y Laravel. Diseño base de datos con MySQL y estilizado con Tailwind CSS. Despliegue y mantenimiento en servidor Web.',
+    },
+    {
+        date: '2021 - Presente',
+        title: 'Aprendizaje autodidacta',
+        company: 'Autónomo',
+        description:
+            'Primeros pasos en el desarrollo web, aprendiendo en mis clases de la universidad y también de forma autodidacta con cursos virtuales, donde creé algunos proyectos personales.',
+    }
+];
+---
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-6">
+                <ExperienceItem {... experience} />
+            </li>
+        ))
+    }                  
+</ol>
+
